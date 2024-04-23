@@ -1,0 +1,89 @@
+$loading-color: #0064a6;
+$loading-background: lighten($loading-color, 60%);;
+
+$loading-size: 100px;
+$loading-speed: 1s;
+
+
+.wrapper{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    background-color: #fff;
+    z-index: 99999999999999;
+  }
+
+.c-spinning-loader {
+    position: relative;
+    
+    width: $loading-size;
+    height: $loading-size;
+    overflow: hidden;
+}
+
+.c-spinning-loader__circle {
+    position: relative;
+
+    width: $loading-size;
+    height: $loading-size;
+    margin: 0 auto;
+
+    border-radius: 100%;
+    background: linear-gradient(to right, $loading-color 10%, rgba($loading-color, 0) 50%);
+
+    animation: spin $loading-speed infinite linear;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 50%;
+        height: 50%;
+
+        border-radius: 100% 0 0 0;
+        background: $loading-color;
+    }
+    
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 92%;
+        height: 92%;
+        margin: auto;
+
+        border-radius: 50%;
+        background: $loading-background;
+    }
+}
+
+.c-spinning-loader__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    
+    transform: translate(-50%, -50%);
+
+    fill: $loading-color;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

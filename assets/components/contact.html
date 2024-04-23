@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW | Contact Us</title>
+    <script
+      src="https://kit.fontawesome.com/655b3b7e45.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      setTimeout(function () {
+        $(".wrapper").fadeOut();
+      }, 4000);
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-image: url("../images/bmw-klasse.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 100vh;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      textarea {
+        resize: none;
+      }
+      .error {
+        color: red;
+        font-size: 0.8em;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      .container-wrapper {
+        display: flex;
+      }
+      .container-wrapper .bmw-logo {
+        width: 60px;
+        height: 70px;
+        margin-left: 1em;
+      }
+      .btn-container .submit {
+        width: 8em;
+      }
+      .btn-container .fa-solid {
+        margin-left: -2em;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      /* PRELOADER */
+      .wrapper {
+        position: fixed;
+        display: grid;
+        place-items: center;
+        inset: 0;
+        background-color: #fff;
+        z-index: 99999999999999;
+      }
+      #loader {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        z-index: 99999;
+      }
+      #stringPreloader {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      #stringPreloader {
+        -webkit-animation: spinner 2.5s infinite linear;
+        animation: spinner 2.5s infinite linear;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      .stringPreloader{
+        width: auto;
+        height: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="loader">
+        <img id="stringPreloader" class="stringPreloader" src="../images/bmw-logo.jpg" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container-wrapper">
+        <h2>Contact Us</h2>
+        <img
+          src="../images/BMW_Grey-Colour_RGB.SVG.asset.1697707041685.SVG"
+          alt="bmw logo"
+          class="bmw-logo"
+        />
+      </div>
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/xeqygllk"
+        method="POST"
+      >
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" />
+        <div id="nameError" class="error"></div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" />
+        <div id="emailError" class="error"></div>
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+27 XX XXX XXXX"
+        />
+        <div id="phoneError" class="error"></div>
+
+        <label for="model">BMW Model</label>
+        <select id="model" name="model">
+          <option value="">Select a model</option>
+          <option value="BMW Z4">BMW Z4</option>
+          <option value="BMW iX">BMW iX</option>
+          <option value="BMW X1">BMW X1</option>
+          <option value="BMW X2">BMW X2</option>
+          <option value="BMW X3">BMW X3</option>
+          <option value="BMW X3 M">BMW X3 M</option>
+          <option value="BMW X4">BMW X4</option>
+          <option value="BMW X4 M">BMW X4 M</option>
+          <option value="BMW X5">BMW X5</option>
+          <option value="BMW X5 M">BMW X5 M</option>
+          <option value="BMW X6">BMW X6</option>
+          <option value="BMW X6 M">BMW X6 M</option>
+          <option value="BMW X7">BMW X7</option>
+          <option value="BMW XM">BMW XM</option>
+          <option value="BMW M135i xDrive">BMW M135i xDrive</option>
+          <option value="BMW M235i xDrive Gran Coupé">
+            BMW M235i xDrive Gran Coupé
+          </option>
+          <option value="BMW M240i Coupé">BMW M240i Coupé</option>
+          <option value="BMW M2 Coupé">BMW M2 Coupé</option>
+          <option value="BMW M340i xDrive Touring">
+            BMW M340i xDrive Touring
+          </option>
+          <option value="BMW M340i xDrive Sedan">BMW M340i xDrive Sedan</option>
+          <option value="BMW M3 CS">BMW M3 CS</option>
+          <option value="BMW M3 Competition Touring with M xDrive">
+            BMW M3 Competition Touring with M xDrive
+          </option>
+          <option value="BMW M3 Sedan">BMW M3 Sedan</option>
+          <option
+            value="BMW i4 M50
+          "
+          >
+            BMW i4 M50
+          </option>
+          <option
+            value="BMW M440i Gran Coupé
+          "
+          >
+            BMW M440i Gran Coupé
+          </option>
+          <option
+            value="BMW M440i xDrive Convertible
+          "
+          >
+            BMW M440i xDrive Convertible
+          </option>
+          <option
+            value="BMW M440i xDrive Coupé
+          "
+          >
+            BMW M440i xDrive Coupé
+          </option>
+          <option
+            value="BMW M4 Competition Convertible with M xDrive
+          "
+          >
+            BMW M4 Competition Convertible with M xDrive
+          </option>
+          <option
+            value="BMW M4 Coupé
+          "
+          >
+            BMW M4 Coupé
+          </option>
+          <option
+            value="BMW i5 M60 xDrive Touring
+          "
+          >
+            BMW i5 M60 xDrive Touring
+          </option>
+          <option
+            value="BMW i5 M60 xDrive Sedan
+          "
+          >
+            BMW i5 M60 xDrive Sedan
+          </option>
+          <option
+            value="BMW M5 Touring
+          "
+          >
+            BMW M5 Touring
+          </option>
+          <option
+            value="BMW M5 Sedan
+          "
+          >
+            BMW M5 Sedan
+          </option>
+          <option
+            value="BMW i7 M70 xDrive
+          "
+          >
+            BMW i7 M70 xDrive
+          </option>
+          <option
+            value="BMW M760e xDrive
+          "
+          >
+            BMW M760e xDrive
+          </option>
+          <option
+            value="BMW M850i xDrive Gran Coupé
+          "
+          >
+            BMW M850i xDrive Gran Coupé
+          </option>
+          <option
+            value="BMW M850i xDrive Convertible
+          "
+          >
+            BMW M850i xDrive Convertible
+          </option>
+          <option
+            value="BMW M850i xDrive Coupé
+          "
+          >
+            BMW M850i xDrive Coupé
+          </option>
+
+          <option
+            value="BMW M8 Gran Coupé
+          "
+          >
+            BMW M8 Gran Coupé
+          </option>
+          <option
+            value="BMW M8 Convertible
+          "
+          >
+            BMW M8 Convertible
+          </option>
+          <option
+            value="BMW M8 Coupé
+          "
+          >
+            BMW M8 Coupé
+          </option>
+
+          <!-- Add more options as needed -->
+        </select>
+        <div id="modelError" class="error"></div>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+        ></textarea>
+        <div id="messageError" class="error"></div>
+
+        <div class="btn-container">
+          <input type="submit" class="submit" value="SEND" />
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          var nameInput = document.getElementById("name");
+          var emailInput = document.getElementById("email");
+          var phoneInput = document.getElementById("phone");
+          var modelInput = document.getElementById("model");
+          var messageInput = document.getElementById("message");
+
+          var nameError = document.getElementById("nameError");
+          var emailError = document.getElementById("emailError");
+          var phoneError = document.getElementById("phoneError");
+          var modelError = document.getElementById("modelError");
+          var messageError = document.getElementById("messageError");
+
+          nameError.textContent = "";
+          emailError.textContent = "";
+          phoneError.textContent = "";
+          modelError.textContent = "";
+          messageError.textContent = "";
+
+          if (nameInput.value.trim() === "") {
+            nameError.textContent = "Please enter your name.";
+            event.preventDefault();
+          }
+
+          if (emailInput.value.trim() === "") {
+            emailError.textContent = "Please enter your email.";
+            event.preventDefault();
+          } else if (!emailInput.checkValidity()) {
+            emailError.textContent = "Please enter a valid email address.";
+            event.preventDefault();
+          }
+
+          var phonePattern = /^(\+27|0)[0-9]{9,10}$/; // South African phone number pattern
+          if (phoneInput.value.trim() === "") {
+            phoneError.textContent = "Please enter your phone number.";
+            event.preventDefault();
+          } else if (!phonePattern.test(phoneInput.value.trim())) {
+            phoneError.textContent =
+              "Please enter a valid South African phone number.";
+            event.preventDefault();
+          }
+
+          if (modelInput.value.trim() === "") {
+            modelError.textContent = "Please select a BMW model.";
+            event.preventDefault();
+          }
+
+          if (messageInput.value.trim() === "") {
+            messageError.textContent = "Please enter your message.";
+            event.preventDefault();
+          }
+        });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
